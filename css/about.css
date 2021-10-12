@@ -1,0 +1,262 @@
+html{
+    font-family: "Capriola";
+    margin: 0 auto;
+    justify-content: center;
+}
+body{
+    display: block;
+}
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* header */
+header{
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+header::after{
+    content: "";
+    background-color: #CB0000;
+    opacity: .7;
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 100%;
+}
+.pc{
+    display: flex;
+    align-items: center;
+}
+.pc h1,
+.pc ul,
+.pc li,
+.pc li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h1{
+    font-size: 4vw;
+    max-width: 100%;
+    margin-left: 5%;
+}
+.pc ul{
+    max-width: 70%;
+    font-size: 2vw;
+}
+.pc li a{
+    color: #fff;
+    margin-right: 30px;
+}
+.pc li a:hover{
+    opacity: .7;
+}
+.sp{
+    display: none;
+}
+
+/* main */
+.main-wrapper{
+    margin: 100px auto 0;
+    max-width: 1000px;
+    background-color: #FCE2BC;
+    padding-bottom: 30px;
+}
+
+/* page-title */
+.page-title{
+    text-align: center;
+    font-size: 4rem;
+    padding: 20px 0;
+}
+
+/* top-wrapper */
+.top-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 300px;
+    text-align: center;
+}
+
+.top-wrapper h3,
+.top-wrapper p{
+    margin: 30px auto;
+}
+.top-wrapper h3{
+    font-size: 2rem;
+}
+.top-wrapper p{
+    font-size: 1.5rem;
+}
+
+/* article-wrapper */
+.article-wrapper{
+    width: 100%;
+}
+
+
+article{
+    display: flex;
+    align-items: center;
+}
+article img{
+    width: 50%;
+}
+article p{
+    font-size: 1.5rem;
+    padding: 5%;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+
+/* footer */
+footer{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #CB0000;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    /* header_sp */
+    header{
+        height: 50px;
+    }
+    header::after{
+        height: 50px;
+    }
+    .pc ul{
+        display: none;
+    }
+    .sp{
+        display: block;
+    }
+
+    /* hunberger-btn */
+    .hunberger-btn{
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hunberger-btn:hover{
+        cursor: pointer;
+    }
+    .bars{
+        position: relative;
+    }
+    .bar{
+        display: block;
+        content: "";
+        background-color: #000;
+        width: 30px;
+        height: 3px;
+    }
+    .bar-mid{
+        margin: 5px auto;
+    }
+
+    /* nav-area */
+    .open{
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    .close{
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+    .nav-area{
+        position: absolute;
+        top: 50px;
+        right: -45%;
+        width: 45%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+    }
+    .nav-area ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+        margin: 40px 20px auto;
+        font-size: 1rem;
+    }
+    .nav-area li{
+        margin-top: 10px;
+    }
+    .nav-area li:last-of-type{
+        margin-bottom: 10px;
+    }
+    .nav-area li a{
+        color: #fff;
+    }
+    .nav-area a:hover{
+        cursor: pointer;
+    
+    }
+    
+    /* main_sp */
+    .main-wrapper{
+        margin-top: 50px;
+    }
+
+    /* page-title_sp */
+    .page-title{
+        text-align: center;
+        font-size: 6vw;
+        padding: 20px 0;
+    }
+
+    /* top-wrapper */
+    .top-wrapper{
+        margin-bottom: 50px;
+    }
+
+    /* article */
+    article{
+        display: block;
+    }
+    article img{
+        width: 100%;
+    }
+}
