@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="../css/html5reset-1.6.1.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+</head>
+<body>
+    <span class="header-temp"></span>
+    <main>
+        <div class="main-wrapper">
+            <div class="page-title">CONTACT</div>
+            <form action="#">
+                <dl class="form-area">
+                    <dt><label for="name-kan">お名前</label><span>必須</span></dt>
+                    <dd>
+                        <input type="text" id="name-kan" name="your-name-kan" placeholder="（例）パン山　×太郎">
+                        <p id="name-error" class="error-text"></p>
+                    </dd>
+
+                    <dt><label for="name-huri">フリガナ</label><span>必須</span></dt>
+                    <dd>
+                        <input type="text" id="name-huri" name="your-name-huri" placeholder="パンヤマ　バツタロウ">
+                        <p id="name-error" class="error-text"></p>
+                    </dd>
+
+                    <dt><label for="tel1">電話番号</label></dt>
+                    <dd>
+                        <input type="text" id="tel1" class="tell" name="your-tel1"> - 
+                        <input type="text" id="tel2" class="tell" name="your-tel1"> - 
+                        <input type="text" id="tel3" class="tell" name="your-tel1">
+                        <p id="tell-error" class="error-text"></p>
+                    </dd>
+                    
+                    <dt><label for="email">メールアドレス</label><span>必須</span></dt>
+                    <dd>
+                        <input type="email" id="email" name="your-email" placeholder="xxxbread@example.com">
+                        <p id="tell-error" class="error-text"></p>
+                    </dd>
+
+                    <dt><label for="adress">ご住所</label></dt>
+                    <dd>
+                        <textarea name="your-adress" id="adress" cols="30" rows="10" placeholder="（例）○○県△△市□□町１-２-３"></textarea>
+                        <p id="adress-error" class="error-text"></p>
+                    </dd>
+                    
+                    <dt><label for="comment">お問い合わせ内容</label><span>必須</span></dt>
+                    <dd>
+                        <textarea name="your-comment" id="comment" cols="30" rows="10" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </dd>
+                </dl>
+                <div class="button">
+                    <button id="submit-button" type="button">送信</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <span class="footer-temp"></span>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
